@@ -13,4 +13,12 @@ dependencies:
 
 test:
   override:
-    - cd tests && bash run_tests.sh
+    - bash tests/build_it.sh
+    - bash tests/test_meteor_app.sh
+    - bash tests/test_meteor_app_with_devbuild.sh
+    - bash tests/test_bundle_local_mount.sh
+    - bash tests/test_bundle_web.sh
+    - bash tests/test_binary_build_on_base.sh
+    - bash tests/test_binary_build_on_bin_build.sh
+    - bash tests/test_phantomjs.sh
+    - bash tests/test_no_app.sh
